@@ -1,0 +1,60 @@
+a {
+  color: #1677ff !important;
+  text-decoration: none !important;
+}
+button {
+  a {
+    color: #fff !important;
+  }
+}
+
+.jodit-workplace {
+  height: 200px !important;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.modal-confirm {
+  img {
+    height: 30px !important;
+  }
+  .ant-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+.ant-modal-wrap {
+  top: 30px !important;
+}
+
+.icon-active {
+  font-size: 20px;
+}
+.img-thumbnail {
+  width: 200px !important;
+}
+.ant-color-picker {
+  z-index: 9999;
+}
+.ant-select-dropdown {
+  z-index: 9999;
+}
+
+.ant-form-item-label {
+  label {
+    text-transform: capitalize !important;
+  }
+}
+.sidebar-toggler {
+  display: none !important;
+}
+.ant-table-cell {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
