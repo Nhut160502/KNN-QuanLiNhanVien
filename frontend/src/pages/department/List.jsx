@@ -1,14 +1,23 @@
+import { EditOutlined } from '@ant-design/icons'
 import { Button, Table } from 'antd'
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { getListData } from 'src/handler/apiHandler'
+import { getData } from 'src/handler/apiHandler'
 import { getListDepartment } from 'src/services'
 
 const columns = [
   {
     title: 'Tên',
     dataIndex: 'name',
+  },
+  {
+    title: 'action',
+    render: (data, _) => (
+      <Link to={`/department/edit/${data?._id}`}>
+        <Button type="primary" icon={<EditOutlined />} />
+      </Link>
+    ),
   },
 ]
 
@@ -18,7 +27,7 @@ const List = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await getListData(dispatch, getListDepartment)
+      const res = await getData(dispatch, getListDepartment)
       setData(res?.data)
     }
 

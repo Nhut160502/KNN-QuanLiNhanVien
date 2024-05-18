@@ -5,6 +5,7 @@ import './index.scss'
 
 import axiosInterceptor from './utils/interceptors'
 import DefaultLayout from './layout/DefaultLayout'
+import Login from './pages/Login'
 
 axiosInterceptor()
 
@@ -14,6 +15,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<DefaultLayout />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -3,7 +3,7 @@ import { Avatar, Button, Table } from 'antd'
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { getListData } from 'src/handler/apiHandler'
+import { getData } from 'src/handler/apiHandler'
 import { getListUsers } from 'src/services'
 
 const columns = [
@@ -62,7 +62,7 @@ const List = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await getListData(dispatch, getListUsers)
+      const res = await getData(dispatch, getListUsers)
       setData(res.data)
     }
 
